@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mohamed & Sama | Engagement</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg-cream: #fbf9f5;
+      --burgundy: #7a1521;
+      --burgundy-light: #9e2a37;
+      --burgundy-soft: rgba(122, 21, 33, 0.08);
+      --text-dark: #2c2223;
+      --text-muted: #6b5c5e;
+      --white: #ffffff;
+
+      --font-display: 'Bodoni Moda', serif;
+      --font-script: 'Pinyon Script', cursive;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    .section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section-inner {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      color: var(--burgundy);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .script {
+      font-family: var(--font-script);
+      color: var(--burgundy);
+    }
+
+    /* =========================
+       STICKERS
+    ========================= */
+
+    .sticker {
+      position: absolute;
+      display: block;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+
+    /*
+      All real stickers are PNGs.
+
+      Files:
+      images/bride-groom.png
+      images/cats.png
+      images/disco-ball.png
+      images/champagne-cups.png
+      images/wedding-table.png
+    */
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px 90px;
+      position: relative;
+    }
+
+    .hero-content {
+      width: min(900px, 100%);
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-small {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      letter-spacing: 5px;
+      color: var(--burgundy);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .hero-names {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 12vw, 8rem);
+      line-height: 0.9;
+      font-weight: 500;
+      color: var(--burgundy);
+      letter-spacing: -3px;
+    }
+
+    .ampersand {
+      font-family: var(--font-script);
+      font-size: 0.65em;
+      margin: 0 10px;
+    }
+
+    .hero-subtitle {
+      margin-top: 22px;
+      font-family: var(--font-sans);
+      font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+      letter-spacing: 5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .save-date {
+      margin-top: 35px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .save-date-top {
+      font-family: var(--font-script);
+      font-size: 2rem;
+      color: var(--burgundy);
+    }
+
+    .save-date-date {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: var(--text-dark);
+    }
+
+    /* Bride + Groom PNG */
+
+    .bride-groom-sticker {
+      position: relative;
+      width: min(430px, 75vw);
+      max-height: 430px;
+      margin: 42px auto 0;
+      object-fit: contain;
+      z-index: 3;
+    }
+
+    /* Cats */
+
+    .cats-sticker {
+      width: 155px;
+      height: 125px;
+      right: 5%;
+      bottom: 13%;
+      transform: rotate(4deg);
+    }
+
+    /* Disco */
+
+    .disco-sticker {
+      width: 125px;
+      height: 125px;
+      left: 5%;
+      top: 18%;
+      transform: rotate(-8deg);
+    }
+
+    /* Champagne */
+
+    .cups-sticker {
+      width: 150px;
+      height: 145px;
+      right: 3%;
+      top: 10%;
+      transform: rotate(7deg);
+    }
+
+    /* Wedding table */
+
+    .table-sticker {
+      width: 230px;
+      height: 180px;
+      left: 1%;
+      bottom: 5%;
+      transform: rotate(-4deg);
+    }
+
+    /* =========================
+       DATE SECTION
+    ========================= */
+
+    .date-section {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .date-card {
+      width: min(600px, 100%);
+      margin: 0 auto;
+      padding: 55px 30px;
+      border-top: 1px solid rgba(122, 21, 33, 0.3);
+      border-bottom: 1px solid rgba(122, 21, 33, 0.3);
+      position: relative;
+    }
+
+    .date-card .day {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      color: var(--burgundy);
+      font-weight: 500;
+    }
+
+    .date-card .month {
+      font-family: var(--font-script);
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      color: var(--burgundy);
+      margin-top: -8px;
+    }
+
+    .date-card .year {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      letter-spacing: 5px;
+      margin-top: 8px;
+      color: var(--text-muted);
+    }
+
+    .date-card .time {
+      margin-top: 28px;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-dark);
+    }
+
+    /* =========================
+       DETAILS
+    ========================= */
+
+    .details {
+      padding: 110px 0;
+      background: var(--burgundy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .details .eyebrow {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .details .section-title {
+      color: var(--white);
+    }
+
+    .details-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .detail-item {
+      padding: 25px 15px;
+      border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .detail-item:first-child {
+      border-left: none;
+    }
+
+    .detail-label {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 13px;
+    }
+
+    .detail-value {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      line-height: 1.3;
+    }
+
+    .detail-script {
+      font-family: var(--font-script);
+      font-size: 1.8rem;
+    }
+
+    /* =========================
+       VENUE
+    ========================= */
+
+    .venue-section {
+      padding: 110px 0;
+      text-align: center;
+    }
+
+    .venue-card {
+      width: min(700px, 100%);
+      margin: 50px auto 0;
+    }
+
+    .venue-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 500;
+      color: var(--burgundy);
+      letter-spacing: 1px;
+    }
+
+    .venue-location {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .map-box {
+      margin-top: 40px;
+      width: 100%;
+      min-height: 250px;
+      border: 1px solid rgba(122, 21, 33, 0.18);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(122,21,33,0.04),
+          rgba(122,21,33,0.09)
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      padding: 30px;
+    }
+
+    .map-pin {
+      font-size: 2rem;
+      color: var(--burgundy);
+    }
+
+    .map-text {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--burgundy);
+    }
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 13px 25px;
+      background: var(--burgundy);
+      color: white;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .map-btn:hover {
+      background: var(--burgundy-light);
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       CALENDAR
+    ========================= */
+
+    .calendar-section {
+      padding: 90px 0 110px;
+      text-align: center;
+    }
+
+    .calendar-text {
+      max-width: 500px;
+      margin: 20px auto 30px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .calendar-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border: 1px solid var(--burgundy);
+      color: var(--burgundy);
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .calendar-btn:hover {
+      background: var(--burgundy);
+      color: white;
+    }
+
+    /* =========================
+       RSVP
+    ========================= */
+
+    .rsvp-section {
+      padding: 110px 0;
+      background: #f5f0e9;
+    }
+
+    .rsvp-container {
+      width: min(650px, 90%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .rsvp-intro {
+      max-width: 500px;
+      margin: 20px auto 40px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+
+    .rsvp-form {
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      border: 1px solid rgba(122, 21, 33, 0.2);
+      background: rgba(255,255,255,0.75);
+      padding: 14px 15px;
+      outline: none;
+      color: var(--text-dark);
+      font-size: 0.8rem;
+      transition: 0.2s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--burgundy);
+    }
+
+    .form-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      background: var(--burgundy);
+      color: white;
+      padding: 16px;
+      cursor: pointer;
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .submit-btn:hover {
+      background: var(--burgundy-light);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    /* Honeypot */
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      pointer-events: none;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .success-heart {
+      font-family: var(--font-script);
+      color: var(--burgundy);
+      font-size: 4rem;
+    }
+
+    .success-message h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      color: var(--burgundy);
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .success-message p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+
+    .error-message {
+      display: none;
+      margin-top: 15px;
+      text-align: center;
+      color: #9b1c1c;
+      font-size: 0.75rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--bg-cream);
+      text-align: center;
+      padding: 80px 20px 55px;
+      position: relative;
+    }
+
+    .footer-names {
+      font-family: var(--font-script);
+      font-size: clamp(3rem, 9vw, 5rem);
+      color: var(--burgundy);
+    }
+
+    .footer-date {
+      margin-top: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .footer-line {
+      width: 60px;
+      height: 1px;
+      background: var(--burgundy);
+      margin: 30px auto;
+      opacity: 0.5;
+    }
+
+    .footer-small {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 100px;
+      }
+
+      .hero-names {
+        letter-spacing: -1px;
+      }
+
+      .bride-groom-sticker {
+        width: min(360px, 82vw);
+        margin-top: 35px;
+      }
+
+      .cats-sticker {
+        width: 110px;
+        height: 90px;
+        right: 0;
+        bottom: 6%;
+      }
+
+      .disco-sticker {
+        width: 85px;
+        height: 85px;
+        left: 0;
+        top: 9%;
+      }
+
+      .cups-sticker {
+        width: 100px;
+        height: 100px;
+        right: -5px;
+        top: 3%;
+      }
+
+      .table-sticker {
+        width: 150px;
+        height: 120px;
+        left: -5px;
+        bottom: 1%;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .detail-item {
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding: 25px 10px;
+      }
+
+      .detail-item:first-child {
+        border-top: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .hero-small {
+        letter-spacing: 3px;
+      }
+
+      .hero-subtitle {
+        letter-spacing: 3px;
+      }
+
+      .bride-groom-sticker {
+        width: 82vw;
+        max-height: 350px;
+      }
+
+      .cats-sticker {
+        width: 85px;
+        height: 70px;
+        right: -3px;
+        bottom: 5%;
+      }
+
+      .disco-sticker {
+        width: 65px;
+        height: 65px;
+        left: -5px;
+      }
+
+      .cups-sticker {
+        width: 75px;
+        height: 75px;
+        right: -8px;
+      }
+
+      .table-sticker {
+        width: 115px;
+        height: 90px;
+        left: -10px;
+      }
+
+      .date-section,
+      .venue-section,
+      .calendar-section,
+      .rsvp-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="section hero">
+
+    <!-- REAL PNG STICKERS -->
+
+    <img
+      src="images/disco-ball.png"
+      alt=""
+      class="sticker disco-sticker"
+    >
+
+    <img
+      src="images/champagne-cups.png"
+      alt=""
+      class="sticker cups-sticker"
+    >
+
+    <img
+      src="images/cats.png"
+      alt=""
+      class="sticker cats-sticker"
+    >
+
+    <img
+      src="images/wedding-table.png"
+      alt=""
+      class="sticker table-sticker"
+    >
+
+    <div class="hero-content">
+
+      <div class="hero-small">
+        Together with their families
+      </div>
+
+      <h1 class="hero-names">
+        MOHAMED
+        <span class="ampersand">&amp;</span>
+        SAMA
+      </h1>
+
+      <div class="hero-subtitle">
+        Are Getting Engaged
+      </div>
+
+      <div class="save-date">
+        <div class="save-date-top">
+          Save The Date
+        </div>
+
+        <div class="save-date-date">
+          Friday · October 23 · 2026
+        </div>
+      </div>
+
+      <!-- REAL BRIDE + GROOM STICKER -->
+
+      <img
+        src="images/bride-groom.png"
+        alt="Mohamed and Sama"
+        class="bride-groom-sticker"
+      >
+
+    </div>
+  </section>
+
+
+  <!-- =========================================
+       DATE
+  ========================================== -->
+
+  <section class="section date-section">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Mark Your Calendar
+      </div>
+
+      <div class="date-card">
+
+        <div class="day">
+          Friday
+        </div>
+
+        <div class="month">
+          October 23
+        </div>
+
+        <div class="year">
+          2026
+        </div>
+
+        <div class="time">
+          6:00 PM Onwards
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       DETAILS
+  ========================================== -->
+
+  <section class="section details">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        The Celebration
+      </div>
+
+      <h2 class="section-title">
+        Join Us For Our Engagement
+      </h2>
+
+      <div class="details-grid">
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Date
+          </div>
+
+          <div class="detail-value">
+            Friday
+            <br>
+            October 23, 2026
+          </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Time
+          </div>
+
+          <div class="detail-value">
+            6:00 PM
+            <br>
+            <span class="detail-script">
+              Onwards
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Dress To Impress
+          </div>
+
+          <div class="detail-value">
+            Celebrate
+            <br>
+            With Us
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       VENUE
+  ========================================== -->
+
+  <section class="section venue-section">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Where We Celebrate
+      </div>
+
+      <h2 class="section-title">
+        The Venue
+      </h2>
+
+      <div class="venue-card">
+
+        <div class="venue-name">
+          Ciela Hall
+        </div>
+
+        <div class="venue-location">
+          Talkha · Dakahlia
+        </div>
+
+        <div class="map-box">
+
+          <div class="map-pin">
+            ♡
+          </div>
+
+          <div class="map-text">
+            Find Us Here
+          </div>
+
+          <a
+            class="map-btn"
+            href="https://maps.app.goo.gl/UCnxs4oLnLnLVCkp7?g_st=ac"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Location in Google Maps
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       CALENDAR
+  ========================================== -->
+
+  <section class="section calendar-section">
+
+    <div class="section-inner">
+
+      <div class="eyebrow">
+        Don't Forget
+      </div>
+
+      <h2 class="section-title">
+        Add To Your Calendar
+      </h2>
+
+      <p class="calendar-text">
+        Save our special day to your calendar so you can celebrate
+        this beautiful moment with us.
+      </p>
+
+      <a
+        class="calendar-btn"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mohamed%20%26%20Sama%20Engagement&dates=20261023T180000/20261023T230000&ctz=Africa%2FCairo&details=Join%20Mohamed%20%26%20Sama%20for%20their%20engagement%20celebration.&location=Ciela%20Hall"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        + Add To Google Calendar
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       RSVP
+  ========================================== -->
+
+  <section class="section rsvp-section">
+
+    <div class="rsvp-container">
+
+      <div class="eyebrow">
+        Kindly Respond
+      </div>
+
+      <h2 class="section-title">
+        RSVP
+      </h2>
+
+      <p class="rsvp-intro">
+        We would love to celebrate this special day with you.
+        Please let us know if you will be joining us.
+      </p>
+
+
+      <!-- RSVP FORM -->
+
+      <form
+        id="rsvpForm"
+        class="rsvp-form"
+      >
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="fullName"
+          >
+            Full Name
+          </label>
+
+          <input
+            class="form-input"
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="attendance"
+          >
+            Will You Attend?
+          </label>
+
+          <select
+            class="form-select"
+            id="attendance"
+            name="attendance"
+            required
+          >
+
+            <option value="" disabled selected>
+              Please select
+            </option>
+
+            <option value="Yes, I'll be there">
+              Yes, I'll be there
+            </option>
+
+            <option value="Sorry, I can't make it">
+              Sorry, I can't make it
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="guests"
+          >
+            Number of Guests
+          </label>
+
+          <select
+            class="form-select"
+            id="guests"
+            name="guests"
+            required
+          >
+
+            <option value="" disabled selected>
+              Select number of guests
+            </option>
+
+            <option value="1">
+              1
+            </option>
+
+            <option value="2">
+              2
+            </option>
+
+            <option value="3">
+              3
+            </option>
+
+            <option value="4">
+              4
+            </option>
+
+            <option value="5">
+              5
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="message"
+          >
+            Message
+          </label>
+
+          <textarea
+            class="form-textarea"
+            id="message"
+            name="message"
+            placeholder="Leave us a little message..."
+          ></textarea>
+
+        </div>
+
+
+        <!-- SPAM HONEYPOT -->
+
+        <div class="honeypot">
+
+          <label for="website">
+            Website
+          </label>
+
+          <input
+            type="text"
+            id="website"
+            name="website"
+            autocomplete="off"
+            tabindex="-1"
+          >
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-btn"
+          id="submitBtn"
+        >
+          Send RSVP
+        </button>
+
+        <div
+          id="errorMessage"
+          class="error-message"
+        >
+          Something went wrong. Please try again.
+        </div>
+
+      </form>
+
+
+      <!-- SUCCESS MESSAGE -->
+
+      <div
+        id="successMsg"
+        class="success-message"
+      >
+
+        <div class="success-heart">
+          ♡
+        </div>
+
+        <h3>
+          Thank You!
+        </h3>
+
+        <p>
+          Your RSVP has been submitted.<br>
+          We can't wait to celebrate with you!
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer>
+
+    <div class="footer-names">
+      Mohamed &amp; Sama
+    </div>
+
+    <div class="footer-date">
+      October 23 · 2026
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="footer-small">
+      With love, Mohamed &amp; Sama
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script>
+
+    /*
+      =====================================================
+      GOOGLE APPS SCRIPT RSVP URL
+      =====================================================
+    */
+
+    const GOOGLE_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycby7dw7P4RKaG_jX8IIcapeWor2Er-97Ky1D485cH9wVYySiLa_knjFpzlTorPAM_Yy2/exec";
+
+
+    /*
+      =====================================================
+      RSVP
+      =====================================================
+    */
+
+    const rsvpForm =
+      document.getElementById("rsvpForm");
+
+    const successMsg =
+      document.getElementById("successMsg");
+
+    const submitBtn =
+      document.getElementById("submitBtn");
+
+    const errorMessage =
+      document.getElementById("errorMessage");
+
+
+    rsvpForm.addEventListener("submit", async function(event) {
+
+      event.preventDefault();
+
+      errorMessage.style.display = "none";
+
+      submitBtn.disabled = true;
+
+      submitBtn.textContent = "Sending...";
+
+
+      const fullName =
+        document.getElementById("fullName").value.trim();
+
+      const attendance =
+        document.getElementById("attendance").value;
+
+      const guests =
+        document.getElementById("guests").value;
+
+      const message =
+        document.getElementById("message").value.trim();
+
+      const website =
+        document.getElementById("website").value.trim();
+
+
+      /*
+        Honeypot:
+        If a bot fills this hidden field,
+        don't submit it.
+      */
+
+      if (website !== "") {
+
+        submitBtn.disabled = false;
+
+        submitBtn.textContent = "Send RSVP";
+
+        return;
+
+      }
+
+
+      const formData = new URLSearchParams();
+
+      formData.append("fullName", fullName);
+      formData.append("attendance", attendance);
+      formData.append("guests", guests);
+      formData.append("message", message);
+      formData.append("website", website);
+
+
+      try {
+
+        /*
+          no-cors is used because the Google Apps Script
+          endpoint doesn't need to expose its response
+          to the browser.
+        */
+
+        await fetch(
+          GOOGLE_SCRIPT_URL,
+          {
+            method: "POST",
+
+            mode: "no-cors",
+
+            headers: {
+              "Content-Type":
+                "application/x-www-form-urlencoded;charset=UTF-8"
+            },
+
+            body: formData.toString()
+          }
+        );
+
+
+        /*
+          The request has been sent.
+          Hide the form and show the thank-you message.
+        */
+
+        rsvpForm.style.display = "none";
+
+        successMsg.style.display = "block";
+
+        successMsg.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        errorMessage.style.display = "block";
+
+        submitBtn.disabled = false;
+
+        submitBtn.textContent = "Send RSVP";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
