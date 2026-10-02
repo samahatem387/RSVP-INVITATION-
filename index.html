@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Medo & Smsm | Engagement</title>
+
+  <!-- =========================================
+       GOOGLE FONTS
+  ========================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================
+       VARIABLES
+    ========================================== */
+
+    :root {
+      --bg-cream: #fbf9f5;
+      --hero-pink: #FFC5C5;
+
+      --burgundy: #7a1521;
+      --burgundy-light: #9e2a37;
+      --burgundy-soft: rgba(122, 21, 33, 0.08);
+
+      --text-dark: #2c2223;
+      --text-muted: #6b5c5e;
+
+      --white: #ffffff;
+
+      --font-display: 'Bodoni Moda', serif;
+      --font-script: 'Pinyon Script', cursive;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+
+    /* =========================================
+       GENERAL
+    ========================================== */
+
+    .section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section-inner {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      color: var(--burgundy);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================== */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 70px 20px 35px;
+
+      position: relative;
+
+      background: #fbf9f5;
+    }
+
+    .hero-content {
+      width: min(950px, 100%);
+      position: relative;
+      z-index: 3;
+    }
+
+
+    /* =========================================
+       HERO TEXT
+    ========================================== */
+
+    .hero-small {
+      font-family: var(--font-display);
+
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+
+      letter-spacing: 4px;
+
+      color: var(--burgundy);
+
+      margin-bottom: 17px;
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-names {
+      font-family: var(--font-display);
+
+      font-size: clamp(4rem, 12vw, 8rem);
+
+      line-height: 0.9;
+
+      font-weight: 500;
+
+      color: var(--burgundy);
+
+      letter-spacing: -3px;
+    }
+
+
+    .ampersand {
+      font-family: var(--font-script);
+
+      font-size: 0.65em;
+
+      margin: 0 8px;
+    }
+
+
+    .hero-subtitle {
+      margin-top: 25px;
+
+      font-family: var(--font-sans);
+
+      font-size: clamp(0.6rem, 1.5vw, 0.85rem);
+
+      letter-spacing: 5px;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+    }
+
+
+    .save-date {
+      margin-top: 35px;
+
+      display: inline-flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 4px;
+    }
+
+
+    .save-date-top {
+      font-family: var(--font-script);
+
+      font-size: 2.1rem;
+
+      color: var(--burgundy);
+    }
+
+
+    .save-date-date {
+      font-family: var(--font-display);
+
+      font-size: 0.95rem;
+
+      letter-spacing: 3px;
+
+      color: var(--text-dark);
+    }
+
+
+    /* =========================================
+       COUPLE + SIDE STICKERS AREA
+    ========================================== */
+
+    .couple-area {
+
+      position: relative;
+
+      width: min(900px, 100%);
+
+      margin: 42px auto 0;
+
+      min-height: 430px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: flex-start;
+    }
+
+
+    /* =========================================
+       BRIDE + GROOM
+    ========================================== */
+
+    .bride-groom-sticker {
+
+      position: relative;
+
+      display: block;
+
+      width: min(430px, 65vw);
+
+      height: auto;
+
+      max-height: 440px;
+
+      object-fit: contain;
+
+      z-index: 4;
+    }
+
+
+    /* =========================================
+       DISCO BALL
+       SMALLER + LOWER + FARTHER LEFT
+    ========================================== */
+
+    .disco-sticker {
+
+      position: absolute;
+
+      width: 205px;
+
+      height: 205px;
+
+      object-fit: contain;
+
+      left: -35px;
+
+      top: 64%;
+
+      z-index: 3;
+
+      transform: rotate(-10deg);
+    }
+
+
+    /* =========================================
+       CHAMPAGNE CUPS
+       LARGER + HIGHER + FARTHER RIGHT
+    ========================================== */
+
+    .cups-sticker {
+
+      position: absolute;
+
+      width: 170px;
+
+      height: 165px;
+
+      object-fit: contain;
+
+      right: -20px;
+
+      top: -20%;
+
+      z-index: 2;
+
+      transform: rotate(7deg);
+    }
+
+
+    /* =========================================
+       DATE SECTION
+    ========================================== */
+
+    .date-section {
+
+      padding: 55px 0 100px;
+
+      text-align: center;
+
+      background: #fbf9f5;
+    }
+
+
+    .date-card {
+
+      width: min(600px, 100%);
+
+      margin: 0 auto;
+
+      padding: 55px 30px;
+
+      border-top:
+        1px solid rgba(122, 21, 33, 0.3);
+
+      border-bottom:
+        1px solid rgba(122, 21, 33, 0.3);
+    }
+
+
+    .date-card .day {
+
+      font-family: var(--font-display);
+
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+
+      color: var(--burgundy);
+
+      font-weight: 500;
+    }
+
+
+    .date-card .month {
+
+      font-family: var(--font-script);
+
+      font-size: clamp(2.5rem, 7vw, 4rem);
+
+      color: var(--burgundy);
+
+      margin-top: -8px;
+    }
+
+
+    .date-card .year {
+
+      font-family: var(--font-sans);
+
+      font-size: 0.8rem;
+
+      letter-spacing: 5px;
+
+      margin-top: 8px;
+
+      color: var(--text-muted);
+    }
+
+
+    .date-card .time {
+
+      margin-top: 28px;
+
+      font-size: 0.75rem;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      color: var(--text-dark);
+    }
+
+
+    /* =========================================
+       RINGS STICKER
+       UNDER 4:00 PM ONWARDS
+    ========================================== */
+
+    .rings-sticker {
+
+      display: block;
+
+      width: 105px;
+
+      height: auto;
+
+      object-fit: contain;
+
+      margin: 18px auto 0;
+    }
+
+
+    /* =========================================
+       DETAILS
+    ========================================== */
+
+    .details {
+
+      padding: 110px 0;
+
+      background: var(--burgundy);
+
+      color: var(--white);
+
+      text-align: center;
+    }
+
+
+    .details .eyebrow {
+
+      color: rgba(255,255,255,0.75);
+    }
+
+
+    .details .section-title {
+
+      color: var(--white);
+    }
+
+
+    .details-grid {
+
+      margin-top: 55px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 35px;
+    }
+
+
+    .detail-item {
+
+      padding: 25px 15px;
+
+      border-left:
+        1px solid rgba(255,255,255,0.2);
+    }
+
+
+    .detail-item:first-child {
+
+      border-left: none;
+    }
+
+
+    .detail-label {
+
+      font-size: 0.65rem;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      opacity: 0.7;
+
+      margin-bottom: 13px;
+    }
+
+
+    .detail-value {
+
+      font-family: var(--font-display);
+
+      font-size: 1.45rem;
+
+      line-height: 1.3;
+    }
+
+
+    .detail-script {
+
+      font-family: var(--font-script);
+
+      font-size: 1.8rem;
+    }
+
+
+    /* =========================================
+       VENUE
+    ========================================== */
+
+    .venue-section {
+
+      padding: 110px 0 70px;
+
+      text-align: center;
+    }
+
+
+    .venue-card {
+
+      width: min(750px, 100%);
+
+      margin: 50px auto 0;
+    }
+
+
+    .venue-name {
+
+      font-family: var(--font-display);
+
+      font-size: clamp(2rem, 6vw, 3.2rem);
+
+      font-weight: 500;
+
+      color: var(--burgundy);
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================================
+       MAP
+    ========================================== */
+
+    .map-box {
+
+      margin-top: 40px;
+
+      width: 100%;
+
+      min-height: 250px;
+
+      border:
+        1px solid rgba(122, 21, 33, 0.18);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(122,21,33,0.04),
+          rgba(122,21,33,0.09)
+        );
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      flex-direction: column;
+
+      gap: 15px;
+
+      padding: 30px;
+    }
+
+
+    .map-pin {
+
+      font-family: var(--font-script);
+
+      font-size: 3rem;
+
+      color: var(--burgundy);
+    }
+
+
+    .map-text {
+
+      font-family: var(--font-display);
+
+      font-size: 1.4rem;
+
+      color: var(--burgundy);
+    }
+
+
+    .map-btn {
+
+      display: inline-block;
+
+      margin-top: 5px;
+
+      padding: 13px 25px;
+
+      background: var(--burgundy);
+
+      color: white;
+
+      font-size: 0.65rem;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transition: 0.25s ease;
+    }
+
+
+    .map-btn:hover {
+
+      background: var(--burgundy-light);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================
+       WEDDING TABLE
+    ========================================== */
+
+    .wedding-table-container {
+
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      margin-top: 45px;
+
+      position: relative;
+    }
+
+
+    .table-sticker {
+
+      position: relative;
+
+      display: block;
+
+      width: min(500px, 80vw);
+
+      height: auto;
+
+      object-fit: contain;
+
+      margin: 0 auto;
+
+      z-index: 3;
+    }
+
+
+    /* =========================================
+       CALENDAR
+       ORIGINAL COLOR — UNCHANGED
+    ========================================== */
+
+    .calendar-section {
+
+      padding: 80px 0 110px;
+
+      text-align: center;
+    }
+
+
+    .calendar-text {
+
+      max-width: 500px;
+
+      margin: 20px auto 30px;
+
+      color: var(--text-muted);
+
+      font-size: 0.85rem;
+
+      line-height: 1.8;
+    }
+
+
+    .calendar-btn {
+
+      display: inline-block;
+
+      padding: 15px 30px;
+
+      border:
+        1px solid var(--burgundy);
+
+      color: var(--burgundy);
+
+      font-size: 0.65rem;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transition: 0.25s ease;
+    }
+
+
+    .calendar-btn:hover {
+
+      background: var(--burgundy);
+
+      color: white;
+    }
+
+
+    /* =========================================
+       RSVP
+    ========================================== */
+
+    .rsvp-section {
+
+      padding: 110px 0;
+
+      background: #f5f0e9;
+    }
+
+
+    .rsvp-container {
+
+      width: min(650px, 90%);
+
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+
+    .rsvp-intro {
+
+      max-width: 500px;
+
+      margin: 20px auto 40px;
+
+      color: var(--text-muted);
+
+      font-size: 0.85rem;
+
+      line-height: 1.8;
+    }
+
+
+    .rsvp-form {
+
+      text-align: left;
+    }
+
+
+    .form-group {
+
+      margin-bottom: 20px;
+    }
+
+
+    .form-label {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 0.65rem;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      color: var(--text-dark);
+
+      font-weight: 600;
+    }
+
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+
+      width: 100%;
+
+      border:
+        1px solid rgba(122, 21, 33, 0.2);
+
+      background:
+        rgba(255,255,255,0.75);
+
+      padding: 14px 15px;
+
+      outline: none;
+
+      color: var(--text-dark);
+
+      font-size: 0.8rem;
+
+      transition: 0.2s ease;
+    }
+
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+
+      border-color: var(--burgundy);
+    }
+
+
+    .form-textarea {
+
+      min-height: 110px;
+
+      resize: vertical;
+    }
+
+
+    .submit-btn {
+
+      width: 100%;
+
+      border: none;
+
+      background: var(--burgundy);
+
+      color: white;
+
+      padding: 16px;
+
+      cursor: pointer;
+
+      font-size: 0.65rem;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      transition: 0.25s ease;
+    }
+
+
+    .submit-btn:hover {
+
+      background: var(--burgundy-light);
+    }
+
+
+    .submit-btn:disabled {
+
+      opacity: 0.6;
+
+      cursor: wait;
+    }
+
+
+    /* =========================================
+       HONEYPOT
+    ========================================== */
+
+    .honeypot {
+
+      position: absolute;
+
+      left: -9999px;
+
+      opacity: 0;
+
+      height: 0;
+
+      width: 0;
+
+      pointer-events: none;
+    }
+
+
+    /* =========================================
+       SUCCESS MESSAGE
+    ========================================== */
+
+    .success-message {
+
+      display: none;
+
+      text-align: center;
+
+      padding: 40px 20px;
+    }
+
+
+    .success-heart {
+
+      font-family: var(--font-script);
+
+      color: var(--burgundy);
+
+      font-size: 4rem;
+    }
+
+
+    .success-message h3 {
+
+      font-family: var(--font-display);
+
+      font-weight: 500;
+
+      color: var(--burgundy);
+
+      font-size: 2rem;
+
+      margin: 10px 0;
+    }
+
+
+    .success-message p {
+
+      color: var(--text-muted);
+
+      font-size: 0.8rem;
+
+      line-height: 1.7;
+    }
+
+
+    .error-message {
+
+      display: none;
+
+      margin-top: 15px;
+
+      text-align: center;
+
+      color: #9b1c1c;
+
+      font-size: 0.75rem;
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================== */
+
+    footer {
+
+      background: var(--bg-cream);
+
+      text-align: center;
+
+      padding: 80px 20px 55px;
+
+      position: relative;
+    }
+
+
+    .footer-names {
+
+      font-family: var(--font-script);
+
+      font-size: clamp(3rem, 9vw, 5rem);
+
+      color: var(--burgundy);
+    }
+
+
+    .footer-date {
+
+      margin-top: 10px;
+
+      font-family: var(--font-sans);
+
+      font-size: 0.6rem;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      color: var(--text-muted);
+    }
+
+
+    .footer-line {
+
+      width: 60px;
+
+      height: 1px;
+
+      background: var(--burgundy);
+
+      margin: 30px auto;
+
+      opacity: 0.5;
+    }
+
+
+    .footer-small {
+
+      font-size: 0.6rem;
+
+      color: var(--text-muted);
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================================
+       MUSIC BUTTON
+    ========================================== */
+
+    .music-button {
+
+      position: fixed;
+
+      right: 20px;
+
+      bottom: 20px;
+
+      z-index: 9999;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 12px 17px;
+
+      border:
+        1px solid rgba(255,255,255,0.35);
+
+      border-radius: 50px;
+
+      background: var(--burgundy);
+
+      color: white;
+
+      font-family: var(--font-sans);
+
+      font-size: 0.58rem;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 6px 20px rgba(0,0,0,0.12);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+
+    .music-button:hover {
+
+      transform: translateY(-3px);
+
+      background: var(--burgundy-light);
+    }
+
+
+    .music-icon {
+
+      font-family: var(--font-display);
+
+      font-size: 1.1rem;
+    }
+
+
+    .music-button.playing .music-icon {
+
+      animation:
+        musicPulse 1.2s ease-in-out infinite;
+    }
+
+
+    @keyframes musicPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.25);
+      }
+
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================== */
+
+    @media (max-width: 900px) {
+
+      .couple-area {
+
+        min-height: 430px;
+
+        width: 100%;
+      }
+
+
+      .bride-groom-sticker {
+
+        width: min(390px, 60vw);
+      }
+
+
+      .disco-sticker {
+
+        width: 165px;
+
+        height: 165px;
+
+        left: -18px;
+
+        top: 64%;
+      }
+
+
+      .cups-sticker {
+
+        width: 145px;
+
+        height: 140px;
+
+        right: -12px;
+
+        top: -18%;
+      }
+
+
+      .table-sticker {
+
+        width: min(450px, 75vw);
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 600px) {
+
+      .hero {
+
+        min-height: auto;
+
+        padding-top: 65px;
+
+        padding-bottom: 35px;
+
+        overflow: hidden;
+
+        background: #fbf9f5;
+      }
+
+
+      .hero-small {
+
+        font-size: 0.72rem;
+
+        letter-spacing: 2.5px;
+
+        padding: 0 20px;
+      }
+
+
+      .hero-names {
+
+        font-size: clamp(2rem, 10vw, 3.4rem);
+
+        line-height: 0.9;
+
+        letter-spacing: -1.2px;
+
+        white-space: nowrap;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: visible;
+
+        transform: scaleX(0.88);
+
+        transform-origin: center;
+      }
+
+
+      .ampersand {
+
+        margin: 0 1px;
+      }
+
+
+      .hero-subtitle {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 3px;
+
+        margin-top: 20px;
+      }
+
+
+      .save-date {
+
+        margin-top: 28px;
+      }
+
+
+      .save-date-top {
+
+        font-size: 1.8rem;
+      }
+
+
+      .save-date-date {
+
+        font-size: 0.72rem;
+
+        letter-spacing: 1.5px;
+      }
+
+
+      /* =====================================
+         COUPLE AREA
+      ====================================== */
+
+      .couple-area {
+
+        width: 100%;
+
+        min-height: 315px;
+
+        margin-top: 25px;
+
+        margin-bottom: -45px;
+      }
+
+
+      .bride-groom-sticker {
+
+        width: 62vw;
+
+        max-width: 330px;
+
+        max-height: 350px;
+
+        margin-top: 20px;
+      }
+
+
+      /* =====================================
+         DISCO BALL
+         SMALLER + LOWER + FAR LEFT
+      ====================================== */
+
+      .disco-sticker {
+
+        width: 132px;
+
+        height: 132px;
+
+        left: -15px;
+
+        top: 68%;
+
+        transform: rotate(-10deg);
+      }
+
+
+      /* =====================================
+         CHAMPAGNE
+         LARGER + HIGHER + FAR RIGHT
+      ====================================== */
+
+      .cups-sticker {
+
+        width: 115px;
+
+        height: 115px;
+
+        right: -10px;
+
+        top: -12%;
+
+        transform: rotate(8deg);
+      }
+
+
+      /* =====================================
+         DATE
+      ====================================== */
+
+      .date-section {
+
+        padding: 55px 0 80px;
+
+        background: #fbf9f5;
+      }
+
+
+      .date-card {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+      }
+
+
+      .rings-sticker {
+
+        width: 90px;
+
+        margin-top: 15px;
+      }
+
+
+      /* =====================================
+         DETAILS
+      ====================================== */
+
+      .details {
+
+        padding: 85px 0;
+      }
+
+
+      .details-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+
+      .detail-item {
+
+        border-left: none;
+
+        border-top:
+          1px solid rgba(255,255,255,0.2);
+
+        padding: 25px 10px;
+      }
+
+
+      .detail-item:first-child {
+
+        border-top: none;
+      }
+
+
+      /* =====================================
+         VENUE
+      ====================================== */
+
+      .venue-section {
+
+        padding-top: 85px;
+
+        padding-bottom: 45px;
+      }
+
+
+      .venue-card {
+
+        margin-top: 40px;
+      }
+
+
+      .map-box {
+
+        min-height: 220px;
+      }
+
+
+      /* =====================================
+         TABLE
+      ====================================== */
+
+      .wedding-table-container {
+
+        margin-top: 35px;
+      }
+
+
+      .table-sticker {
+
+        width: 88vw;
+
+        max-width: 430px;
+      }
+
+
+      /* =====================================
+         CALENDAR
+      ====================================== */
+
+      .calendar-section {
+
+        padding-top: 65px;
+
+        padding-bottom: 85px;
+      }
+
+
+      /* =====================================
+         RSVP
+      ====================================== */
+
+      .rsvp-section {
+
+        padding: 85px 0;
+      }
+
+
+      /* =====================================
+         MUSIC
+      ====================================== */
+
+      .music-button {
+
+        right: 12px;
+
+        bottom: 12px;
+
+        padding: 11px 14px;
+      }
+
+    }
+
+
+    /* =========================================
+       VERY SMALL PHONES
+    ========================================== */
+
+    @media (max-width: 380px) {
+
+      .hero-names {
+
+        font-size: 1.85rem;
+
+        letter-spacing: -0.9px;
+
+        white-space: nowrap;
+
+        transform: scaleX(0.9);
+
+        transform-origin: center;
+
+        line-height: 0.85;
+      }
+
+
+      .hero-names .ampersand {
+
+        display: inline;
+
+        font-size: 0.6em;
+
+        line-height: normal;
+
+        margin: 0 1px;
+      }
+
+
+      .couple-area {
+
+        min-height: 300px;
+
+        margin-bottom: -50px;
+      }
+
+
+      .bride-groom-sticker {
+
+        width: 61vw;
+
+        margin-top: 25px;
+      }
+
+
+      .disco-sticker {
+
+        width: 110px;
+
+        height: 110px;
+
+        left: -14px;
+
+        top: 69%;
+      }
+
+
+      .cups-sticker {
+
+        width: 100px;
+
+        height: 100px;
+
+        right: -8px;
+
+        top: -11%;
+      }
+
+
+      .rings-sticker {
+
+        width: 80px;
+      }
+
+
+      .table-sticker {
+
+        width: 92vw;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="section hero">
+
+    <div class="hero-content">
+
+      <div class="hero-small">
+        Together with their families
+      </div>
+
+
+      <h1 class="hero-names">
+
+        MOHAMED
+
+        <span class="ampersand">
+          &amp;
+        </span>
+
+        SAMA
+
+      </h1>
+
+
+      <div class="hero-subtitle">
+        Are Getting Engaged
+      </div>
+
+
+      <div class="save-date">
+
+        <div class="save-date-top">
+          Save The Date
+        </div>
+
+        <div class="save-date-date">
+          Friday · October 23 · 2026
+        </div>
+
+      </div>
+
+
+      <!-- =====================================
+           COUPLE + STICKERS
+      ====================================== -->
+
+      <div class="couple-area">
+
+
+        <img
+          src="Images/disco-ball.png"
+          alt=""
+          class="disco-sticker"
+        >
+
+
+        <img
+          src="Images/champagne-cups.png"
+          alt=""
+          class="cups-sticker"
+        >
+
+
+        <img
+          src="Images/bride-groom.png"
+          alt="Medo and Smsm"
+          class="bride-groom-sticker"
+        >
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       DATE
+  ========================================== -->
+
+  <section class="section date-section">
+
+    <div class="section-inner">
+
+
+      <div class="eyebrow">
+        Mark Your Calendar
+      </div>
+
+
+      <div class="date-card">
+
+
+        <div class="day">
+          Friday
+        </div>
+
+
+        <div class="month">
+          October 23
+        </div>
+
+
+        <div class="year">
+          2026
+        </div>
+
+
+        <div class="time">
+          4:00 PM Onwards
+        </div>
+
+
+        <img
+          src="Images/rings.png"
+          alt="Two rings"
+          class="rings-sticker"
+        >
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       DETAILS
+  ========================================== -->
+
+  <section class="section details">
+
+    <div class="section-inner">
+
+
+      <div class="eyebrow">
+        The Celebration
+      </div>
+
+
+      <h2 class="section-title">
+        Join Us For Our Engagement
+      </h2>
+
+
+      <div class="details-grid">
+
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Date
+          </div>
+
+
+          <div class="detail-value">
+
+            Friday
+
+            <br>
+
+            October 23, 2026
+
+          </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Time
+          </div>
+
+
+          <div class="detail-value">
+
+            4:00 PM
+
+            <br>
+
+            <span class="detail-script">
+              Onwards
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+          <div class="detail-label">
+            Dress To Impress
+          </div>
+
+
+          <div class="detail-value">
+
+            Celebrate
+
+            <br>
+
+            With Us
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       VENUE
+  ========================================== -->
+
+  <section class="section venue-section">
+
+    <div class="section-inner">
+
+
+      <div class="eyebrow">
+        Where We Celebrate
+      </div>
+
+
+      <h2 class="section-title">
+        The Venue
+      </h2>
+
+
+      <div class="venue-card">
+
+
+        <div class="venue-name">
+          Celia Hall
+        </div>
+
+
+        <div class="map-box">
+
+
+          <div class="map-pin">
+            ♡
+          </div>
+
+
+          <div class="map-text">
+            Find Us Here
+          </div>
+
+
+          <a
+            class="map-btn"
+            href="https://maps.app.goo.gl/UCnxs4oLnLnLVCkp7?g_st=ac"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Location in Google Maps
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="wedding-table-container">
+
+
+        <img
+          src="Images/wedding-table.png"
+          alt=""
+          class="table-sticker"
+        >
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       CALENDAR
+       ORIGINAL COLOR — UNCHANGED
+  ========================================== -->
+
+  <section class="section calendar-section">
+
+    <div class="section-inner">
+
+
+      <div class="eyebrow">
+        Don't Forget
+      </div>
+
+
+      <h2 class="section-title">
+        Add To Their Calendar
+      </h2>
+
+
+      <p class="calendar-text">
+
+        Save our special day to your calendar so you can
+        celebrate this beautiful moment with us.
+
+      </p>
+
+
+      <a
+        class="calendar-btn"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Medo%20%26%20Smsm%20Engagement&dates=20261023T160000/20261023T230000&ctz=Africa%2FCairo&details=Join%20Medo%20%26%20Smsm%20for%20their%20engagement%20celebration.&location=Celia%20Hall"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        + Add To Google Calendar
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       RSVP
+  ========================================== -->
+
+  <section class="section rsvp-section">
+
+    <div class="rsvp-container">
+
+
+      <div class="eyebrow">
+        Kindly Respond
+      </div>
+
+
+      <h2 class="section-title">
+        RSVP
+      </h2>
+
+
+      <p class="rsvp-intro">
+
+        We would love to celebrate this special day with you.
+        Please let us know if you will be joining us.
+
+      </p>
+
+
+      <form
+        id="rsvpForm"
+        class="rsvp-form"
+      >
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="fullName"
+          >
+            Full Name
+          </label>
+
+
+          <input
+            class="form-input"
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="attendance"
+          >
+            Will You Attend?
+          </label>
+
+
+          <select
+            class="form-select"
+            id="attendance"
+            name="attendance"
+            required
+          >
+
+            <option
+              value=""
+              disabled
+              selected
+            >
+              Please select
+            </option>
+
+
+            <option value="Yes, I'll be there">
+              Yes, I'll be there
+            </option>
+
+
+            <option value="Sorry, I can't make it">
+              Sorry, I can't make it
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="guests"
+          >
+            Number of Guests
+          </label>
+
+
+          <select
+            class="form-select"
+            id="guests"
+            name="guests"
+            required
+          >
+
+            <option
+              value=""
+              disabled
+              selected
+            >
+              Select number of guests
+            </option>
+
+
+            <option value="1">
+              1
+            </option>
+
+
+            <option value="2">
+              2
+            </option>
+
+
+            <option value="3">
+              3
+            </option>
+
+
+            <option value="4">
+              4
+            </option>
+
+
+            <option value="5">
+              5
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- =========================================
+             ADDITIONAL GUEST NAMES
+        ========================================== -->
+
+        <div id="additionalGuests"></div>
+
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="message"
+          >
+            Message
+          </label>
+
+
+          <textarea
+            class="form-textarea"
+            id="message"
+            name="message"
+            placeholder="Leave us a little message..."
+          ></textarea>
+
+        </div>
+
+
+        <div class="honeypot">
+
+          <label for="website">
+            Website
+          </label>
+
+
+          <input
+            type="text"
+            id="website"
+            name="website"
+            autocomplete="off"
+            tabindex="-1"
+          >
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="submit-btn"
+          id="submitBtn"
+        >
+          Send RSVP
+        </button>
+
+
+        <div
+          id="errorMessage"
+          class="error-message"
+        >
+          Something went wrong. Please try again.
+        </div>
+
+
+      </form>
+
+
+      <div
+        id="successMsg"
+        class="success-message"
+      >
+
+        <div class="success-heart">
+          ♡
+        </div>
+
+
+        <h3>
+          Thank You!
+        </h3>
+
+
+        <p>
+
+          Your RSVP has been submitted.
+
+          <br>
+
+          We can't wait to celebrate with you!
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer>
+
+
+    <div class="footer-names">
+      Medo &amp; Smsm
+    </div>
+
+
+    <div class="footer-date">
+      October 23 · 2026
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <div class="footer-small">
+      With love, Medo &amp; Smsm
+    </div>
+
+
+  </footer>
+
+
+  <!-- =========================================
+       MUSIC
+  ========================================== -->
+
+  <audio
+    id="bgMusic"
+    preload="auto"
+    loop
+  >
+
+    <source
+      src="Images/birds-of-a-feather.mp3"
+      type="audio/mpeg"
+    >
+
+  </audio>
+
+
+  <button
+    id="musicButton"
+    class="music-button"
+    type="button"
+    aria-label="Play music"
+  >
+
+    <span class="music-icon">
+      ♫
+    </span>
+
+    <span id="musicText">
+      Play Music
+    </span>
+
+  </button>
+
+
+  <script>
+
+    /* =========================================
+       GOOGLE APPS SCRIPT URL
+    ========================================== */
+
+    const GOOGLE_SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycby7dw7P4RKaG_jX8IIcapeWor2Er-97Ky1D485cH9wVYySiLa_knjFpzlTorPAM_Yy2/exec";
+
+
+    /* =========================================
+       RSVP
+    ========================================== */
+
+    const rsvpForm =
+      document.getElementById("rsvpForm");
+
+    const successMsg =
+      document.getElementById("successMsg");
+
+    const submitBtn =
+      document.getElementById("submitBtn");
+
+    const errorMessage =
+      document.getElementById("errorMessage");
+
+
+    /* =========================================
+       DYNAMIC ADDITIONAL GUEST NAMES
+    ========================================== */
+
+    const guestsSelect =
+      document.getElementById("guests");
+
+    const additionalGuests =
+      document.getElementById("additionalGuests");
+
+
+    guestsSelect.addEventListener(
+      "change",
+      function() {
+
+        const numberOfGuests =
+          parseInt(this.value);
+
+
+        additionalGuests.innerHTML = "";
+
+
+        for (
+          let i = 2;
+          i <= numberOfGuests;
+          i++
+        ) {
+
+          const group =
+            document.createElement("div");
+
+
+          group.className =
+            "form-group";
+
+
+          group.innerHTML = `
+            <label
+              class="form-label"
+              for="guest${i}"
+            >
+              Guest ${i} Name
+            </label>
+
+            <input
+              class="form-input"
+              type="text"
+              id="guest${i}"
+              name="guest${i}"
+              placeholder="Full name"
+              required
+            >
+          `;
+
+
+          additionalGuests.appendChild(group);
+
+        }
+
+      }
+    );
+
+
+    rsvpForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+        errorMessage.style.display = "none";
+
+        submitBtn.disabled = true;
+
+        submitBtn.textContent = "Sending...";
+
+
+        const fullName =
+          document
+            .getElementById("fullName")
+            .value
+            .trim();
+
+
+        const attendance =
+          document
+            .getElementById("attendance")
+            .value;
+
+
+        const guests =
+          document
+            .getElementById("guests")
+            .value;
+
+
+        const message =
+          document
+            .getElementById("message")
+            .value
+            .trim();
+
+
+        const website =
+          document
+            .getElementById("website")
+            .value
+            .trim();
+
+
+        if (website !== "") {
+
+          submitBtn.disabled = false;
+
+          submitBtn.textContent = "Send RSVP";
+
+          return;
+        }
+
+
+        /* =========================================
+           COLLECT ADDITIONAL GUEST NAMES
+        ========================================== */
+
+        const numberOfGuests =
+          parseInt(guests);
+
+
+        const guestNames = [];
+
+
+        for (
+          let i = 2;
+          i <= numberOfGuests;
+          i++
+        ) {
+
+          const guestInput =
+            document.getElementById(`guest${i}`);
+
+
+          if (guestInput) {
+
+            const guestName =
+              guestInput.value.trim();
+
+
+            guestNames.push(guestName);
+
+          }
+
+        }
+
+
+        const formData =
+          new URLSearchParams();
+
+
+        formData.append(
+          "fullName",
+          fullName
+        );
+
+
+        formData.append(
+          "attendance",
+          attendance
+        );
+
+
+        formData.append(
+          "guests",
+          guests
+        );
+
+
+        /* =========================================
+           SEND ADDITIONAL GUEST NAMES
+        ========================================== */
+
+        formData.append(
+          "guestNames",
+          guestNames.join(" | ")
+        );
+
+
+        formData.append(
+          "message",
+          message
+        );
+
+
+        formData.append(
+          "website",
+          website
+        );
+
+
+        try {
+
+          await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+              method: "POST",
+
+              mode: "no-cors",
+
+              headers: {
+                "Content-Type":
+                  "application/x-www-form-urlencoded;charset=UTF-8"
+              },
+
+              body:
+                formData.toString()
+            }
+          );
+
+
+          rsvpForm.style.display = "none";
+
+          successMsg.style.display = "block";
+
+
+          successMsg.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+
+        }
+
+
+        catch (error) {
+
+          console.error(error);
+
+          errorMessage.style.display = "block";
+
+          submitBtn.disabled = false;
+
+          submitBtn.textContent = "Send RSVP";
+
+        }
+
+      }
+    );
+
+
+    /* =========================================
+       MUSIC
+    ========================================== */
+
+    const bgMusic =
+      document.getElementById("bgMusic");
+
+    const musicButton =
+      document.getElementById("musicButton");
+
+    const musicText =
+      document.getElementById("musicText");
+
+
+    musicButton.addEventListener(
+      "click",
+      async function() {
+
+        if (bgMusic.paused) {
+
+          try {
+
+            await bgMusic.play();
+
+            musicText.textContent =
+              "Pause Music";
+
+            musicButton.classList.add(
+              "playing"
+            );
+
+          }
+
+          catch (error) {
+
+            console.error(
+              "Music could not play:",
+              error
+            );
+
+          }
+
+        }
+
+        else {
+
+          bgMusic.pause();
+
+          musicText.textContent =
+            "Play Music";
+
+          musicButton.classList.remove(
+            "playing"
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+          </html>
